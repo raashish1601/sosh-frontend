@@ -83,7 +83,7 @@ const SeatingLayout = ({ rows, columns }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.heading}>Screen Here</View>
+      <Text style={styles.heading}>Screen Here</Text>
       {seats.map((seat, index) => {
         if (index % columns === 0) {
           return (
