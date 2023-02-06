@@ -83,6 +83,7 @@ const SeatingLayout = ({ rows, columns }) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.heading}>Screen Here</View>
       {seats.map((seat, index) => {
         if (index % columns === 0) {
           return (
@@ -96,7 +97,7 @@ const SeatingLayout = ({ rows, columns }) => {
         return null;
       })}
       <View style={styles.bookNowContainer}>
-        <Text style={styles.totalPriceText}>Total Price: Rs. {totalPrice}</Text>
+        <Text style={styles.totalPriceText}>Total Price: ₹ {totalPrice}</Text>
         <TouchableOpacity
           style={styles.bookNowButton}
           onPress={handleBookNowPress}
@@ -113,6 +114,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
+  },
+  heading: {
+    fontSize: 25,
+    marginBottom: 20,
+    borderBottomWidth: 4,
+    borderBottomColor: "#5A5A5A"
   },
   seatingRow: {
     flexDirection: "row",
